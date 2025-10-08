@@ -5,6 +5,8 @@ import 'entrada2.dart';
 import 'entrada3.dart';
 import 'entrada4.dart';
 import 'entrada5.dart';
+import 'entrada6.dart';
+import 'entrada7.dart';
 
 
 class MenuLateral extends StatelessWidget {
@@ -70,7 +72,22 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => const Enlace5()));
             },
           ),
-          
+          ListTile(
+            title: const Text("Texto en filas"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace6()));
+            },
+          ),
+          ListTile(
+            title: const Text("Imagenes repetidas"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace7()));
+            },
+          ),
         ],
       ),
     );
