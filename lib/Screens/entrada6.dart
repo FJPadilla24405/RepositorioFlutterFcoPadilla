@@ -15,7 +15,8 @@ class Enlace6 extends StatelessWidget {
       ),
       drawer: const MenuLateral(),
       body: Center(
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 	        children:[
                 Text("Hola que tal soy colosal como este pedazo de texto que no cabe",
@@ -43,6 +44,7 @@ class Enlace6 extends StatelessWidget {
                 ), textAlign: TextAlign.center,),
           ]
         ),
+        )
       ),
     );
   }

@@ -14,7 +14,8 @@ class Enlace4 extends StatelessWidget {
       ),
       drawer: const MenuLateral(),
       body: const Center(
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 	        children:[
             Row(
@@ -39,6 +40,8 @@ class Enlace4 extends StatelessWidget {
             ),
           ]
         ),
+        )
+        
       ),
     );
   }

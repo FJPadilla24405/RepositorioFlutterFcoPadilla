@@ -14,7 +14,8 @@ class Enlace3 extends StatelessWidget {
       ),
       drawer: const MenuLateral(),
       body: Center(
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 	        children:[
             Image.asset('assets/images/Ricardo.png', width: 100, height: 100,),
@@ -22,6 +23,7 @@ class Enlace3 extends StatelessWidget {
             Image.asset('assets/images/Ricardo.png', width: 300, height: 300,),
           ]
         ),
+        )
       ),
     );
   }

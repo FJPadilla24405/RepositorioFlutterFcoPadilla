@@ -15,7 +15,8 @@ class Enlace2 extends StatelessWidget {
       ),
       drawer: const MenuLateral(),
       body: Center(
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
 	        children:[
             Image.asset('assets/images/RedHarlow.jpg', width: 300, height: 300,),
@@ -25,7 +26,8 @@ class Enlace2 extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ), textAlign: TextAlign.center,),
           ]
-        ),
+        ),)
+        
 
       ),
     );
