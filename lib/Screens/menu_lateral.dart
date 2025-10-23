@@ -8,6 +8,7 @@ import 'entrada5.dart';
 import 'entrada6.dart';
 import 'entrada7.dart';
 import 'entrada8.dart';
+import 'entrada9.dart';
 
 
 class MenuLateral extends StatelessWidget {
@@ -95,6 +96,14 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => const Enlace8()));
+            },
+          ),
+          ListTile(
+            title: const Text("Challenge"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace9()));
             },
           ),
         ],
