@@ -9,6 +9,7 @@ import 'entrada6.dart';
 import 'entrada7.dart';
 import 'entrada8.dart';
 import 'entrada9.dart';
+import 'entrada10.dart';
 
 
 class MenuLateral extends StatelessWidget {
@@ -104,6 +105,14 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => const Enlace9()));
+            },
+          ),
+          ListTile(
+            title: const Text("Contador de clicks"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace10()));
             },
           ),
         ],
