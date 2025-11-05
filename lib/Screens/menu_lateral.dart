@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import '../home_screen.dart';
+import '../main.dart';
 import 'entrada2.dart';
 import 'entrada3.dart';
 import 'entrada4.dart';
