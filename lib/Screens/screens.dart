@@ -1,0 +1,13 @@
+export 'home_screen.dart';
+export './entradas/entrada2.dart';
+export './entradas/entrada3.dart';
+export './entradas/entrada4.dart';
+export './entradas/entrada5.dart';
+export './entradas/entrada6.dart';
+export './entradas/entrada7.dart';
+export './entradas/entrada8.dart';
+export './entradas/entrada9.dart';
+export './entradas/entrada10.dart';
+export './entradas/entrada11.dart';
+export './entradas/entrada12.dart';
+export './entradas/entrada13.dart';

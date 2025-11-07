@@ -1,16 +1,6 @@
 
 import 'package:flutter/material.dart';
-import '../main.dart';
-import 'entrada2.dart';
-import 'entrada3.dart';
-import 'entrada4.dart';
-import 'entrada5.dart';
-import 'entrada6.dart';
-import 'entrada7.dart';
-import 'entrada8.dart';
-import 'entrada9.dart';
-import 'entrada10.dart';
-import 'entrada11.dart';
+import 'screens.dart';
 
 
 class MenuLateral extends StatelessWidget {
@@ -122,6 +112,22 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => const Enlace11()));
+            },
+          ),
+          ListTile(
+            title: const Text("Colores aleatorios"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace12()));
+            },
+          ),
+          ListTile(
+            title: const Text("Juego de clicks"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace13()));
             },
           ),
         ],
