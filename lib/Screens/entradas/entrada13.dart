@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../tools/variabletimer.dart';
+import '../screens.dart';
 import '../menu_lateral.dart';
 import 'dart:math';
 
-import '/themes/temas.dart';
+import '../../themes/temas.dart';
 
 class Enlace13 extends StatefulWidget {
   const Enlace13({super.key});
@@ -14,7 +15,6 @@ class Enlace13 extends StatefulWidget {
   // ignore: library_private_types_in_public_api
   _RandomImages createState() => _RandomImages();
 }
-
 
 class _RandomImages extends State<Enlace13> {
   int points = 0;
@@ -33,8 +33,6 @@ class _RandomImages extends State<Enlace13> {
   ];
   late double screenWidth = 500;
   late double screenHeight = 1000;
-  
-
 
   @override
   void initState() {
@@ -64,7 +62,7 @@ class _RandomImages extends State<Enlace13> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: const Temas().Tema1(),
+      theme: isDarkMode ? Temas().Tema1() : Temas().Tema2(),
       home: Scaffold(
          appBar: AppBar(
             title: const Text("Juego de imágenes"),

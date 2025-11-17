@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../menu_lateral.dart';
 import '../../themes/temas.dart';
+import '../screens.dart';
 
 class Enlace10 extends StatelessWidget {
   const Enlace10({super.key});
@@ -11,7 +12,7 @@ class Enlace10 extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Contador de clicks',
-      theme: const Temas().Tema1(),
+      theme: isDarkMode ? Temas().Tema1() : Temas().Tema2(),
       home: const MiContador()
     );
   }

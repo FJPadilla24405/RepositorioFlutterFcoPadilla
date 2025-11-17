@@ -6,7 +6,7 @@ class Enlace11 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: Pantalla());
+    return const MaterialApp(debugShowCheckedModeBanner: false, home: Pantalla());
   }
 }
 
@@ -31,7 +31,7 @@ class PantallaInstagram extends State<Pantalla>{
     double screenWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Actividad 1',
+        title: 'Instagram',
         home: Scaffold(
           appBar: AppBar(
             title: const Text("FranciscoPadilla"),

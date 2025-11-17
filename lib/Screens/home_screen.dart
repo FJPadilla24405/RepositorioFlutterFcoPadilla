@@ -6,19 +6,23 @@ import '../themes/temas.dart';
 
 
 void main() => runApp(const HomeApp());
+bool isDarkMode = true;
 
-
-class HomeApp extends StatelessWidget {
+class HomeApp extends StatefulWidget {
   const HomeApp({super.key});
 
+  @override
+  AppState createState() => AppState();
+}
 
+class AppState extends  State<HomeApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Actividad 1',
-        theme: const Temas().Tema1(),
+        theme: isDarkMode ? Temas().Tema1() : Temas().Tema2(),
         home: Scaffold(
           appBar: AppBar(
             title: Text("Francisco Padilla",
@@ -27,15 +31,25 @@ class HomeApp extends StatelessWidget {
                 fontSize: 24,
               ),
             ),
+            actions: [
+              Switch(
+                value: isDarkMode,
+                onChanged: (value) {
+                  setState(() {
+                    isDarkMode = value;
+                  });
+                },
+              ),
+            ],
           ),
           drawer: const MenuLateral(),
           body: Center(
              child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("https://github.com/FJPadilla24405/Actividad1Flutter",
+                Text("https://github.com/FJPadilla24405/RepositorioFlutterFcoPadilla",
                 style: GoogleFonts.kenia(
-                  fontSize: 50,
+                  fontSize: 38,
                   fontWeight: FontWeight.bold
                 ), textAlign: TextAlign.center,),
               ],)

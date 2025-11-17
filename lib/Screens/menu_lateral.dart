@@ -2,11 +2,9 @@
 import 'package:flutter/material.dart';
 import 'screens.dart';
 
-
 class MenuLateral extends StatelessWidget {
   const MenuLateral({super.key});
-
-
+  
   @override
   Widget build(BuildContext context) {
     return Drawer(

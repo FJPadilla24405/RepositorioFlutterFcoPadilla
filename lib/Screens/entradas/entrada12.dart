@@ -4,6 +4,7 @@ import 'dart:async';
 
 import '../../themes/temas.dart';
 import '../menu_lateral.dart';
+import '../screens.dart';
 
 class Enlace12 extends StatefulWidget {
   const Enlace12({super.key});
@@ -13,12 +14,11 @@ class Enlace12 extends StatefulWidget {
   State<Enlace12> createState() => _RandomColors();
 }
 
-
 class _RandomColors extends State<Enlace12> {
   int points = 0;
   late String randomName;
   late Color randomColor;
-  var colorNames = ['rojo', 'naranja', 'amarillo', 'verde', 'celeste', 'azul', 'morado', 'rosa', 'marron', 'negro', 'gris', 'blanco'];
+  var colorNames = ['rojo', 'naranja', 'amarillo', 'verde', 'celeste', 'azul', 'morado', 'rosa', 'marron', 'negro', 'gris'];
   var colorHex = [
     const Color.fromARGB(255, 255, 0, 0),
     const Color.fromARGB(255, 255, 136, 0),
@@ -31,9 +31,7 @@ class _RandomColors extends State<Enlace12> {
     const Color.fromARGB(255, 92, 41, 0),
     const Color.fromARGB(255, 0, 0, 0),
     const Color.fromARGB(255, 147, 147, 147),
-    const Color.fromARGB(255, 255, 255, 255),
   ];
-
 
   @override
   void initState() {
@@ -43,7 +41,6 @@ class _RandomColors extends State<Enlace12> {
     timer();
   }
 
-
   void timer() {
     Timer.periodic(const Duration(milliseconds: 750), (timer) {
       getRandomColor();
@@ -52,15 +49,14 @@ class _RandomColors extends State<Enlace12> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: const Temas().Tema1(),
+      theme: isDarkMode ? Temas().Tema1() : Temas().Tema2(),
       home: Scaffold(
         appBar: AppBar(
-            title: const Text("Juego de imágenes"),
+            title: const Text("Juego de colores"),
           ),
           drawer: const MenuLateral(),
         body: Column(
