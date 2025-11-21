@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../screens/menu_lateral.dart';
 import '../themes/temas.dart';
 
-
-void main() => runApp(const HomeApp());
 bool isDarkMode = true;
 
 class HomeApp extends StatefulWidget {
@@ -28,7 +27,7 @@ class AppState extends  State<HomeApp> {
             title: Text("Francisco Padilla",
             style: GoogleFonts.pacifico(
                 letterSpacing: 8.0,
-                fontSize: 24,
+                fontSize: 20,
               ),
             ),
             actions: [
@@ -47,13 +46,15 @@ class AppState extends  State<HomeApp> {
              child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("https://github.com/FJPadilla24405/RepositorioFlutterFcoPadilla",
-                style: GoogleFonts.kenia(
+                InkWell(
+                  child: Text('https://github.com/FJPadilla24405/RepositorioFlutterFcoPadilla',
+                  style: GoogleFonts.kenia(
                   fontSize: 38,
                   fontWeight: FontWeight.bold
-                ), textAlign: TextAlign.center,),
+                  ), textAlign: TextAlign.center,),
+                  onTap: () => launchUrl(Uri.parse('https://github.com/FJPadilla24405/RepositorioFlutterFcoPadilla'))
+                ),
               ],)
-            
           ),
         ));
   }

@@ -1,4 +1,5 @@
 export 'home_screen.dart';
+export 'splash_screen.dart';
 export './entradas/entrada2.dart';
 export './entradas/entrada3.dart';
 export './entradas/entrada4.dart';

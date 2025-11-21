@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../menu_lateral.dart';
 
 class Enlace11 extends StatelessWidget {
@@ -87,7 +88,13 @@ class PantallaInstagram extends State<Pantalla>{
                         const Text("Made in LA ⚡"),
                         const Text("Cruelty Free 🐶"),
                         const Text("#ColourPopMe", style: TextStyle(color: Colors.blue)),
-                        const Text("bit.ly/2w9g74q", style: TextStyle(color: Colors.blue)),
+                        InkWell(
+                          child: Text('bit.ly/2w9g74q',
+                          style: TextStyle(
+                          color: Colors.blue
+                          ), textAlign: TextAlign.center,),
+                          onTap: () => launchUrl(Uri.parse('https://colourpop.com/?utm_source=IG&utm_medium=Social&utm_campaign=Bio'))
+                        ),
                         RichText(text: const TextSpan(
                           style: TextStyle(
                           fontSize: 14.0,
