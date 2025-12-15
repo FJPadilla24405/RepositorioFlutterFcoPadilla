@@ -12,3 +12,6 @@ export './entradas/entrada10.dart';
 export './entradas/entrada11.dart';
 export './entradas/entrada12.dart';
 export './entradas/entrada13.dart';
+export './entradas/entrada14.dart';
+export './entradas/entrada15.dart';
+export './examen/pantalla1.dart';

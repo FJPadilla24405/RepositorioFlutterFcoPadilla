@@ -128,6 +128,30 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => const Enlace13()));
             },
           ),
+          ListTile(
+            title: const Text("Adivinar número"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace14()));
+            },
+          ),
+          ListTile(
+            title: const Text("Formularios"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Enlace15()));
+            },
+          ),
+          ListTile(
+            title: const Text("Examen"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Pantalla1()));
+            },
+          ),
         ],
       ),
     );

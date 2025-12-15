@@ -14,7 +14,7 @@ class HomeApp extends StatefulWidget {
   AppState createState() => AppState();
 }
 
-class AppState extends  State<HomeApp> {
+class AppState extends State<HomeApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

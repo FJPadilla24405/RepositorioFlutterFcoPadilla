@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../tools/variabletimer.dart';
 import '../screens.dart';
@@ -37,6 +38,7 @@ class _RandomImages extends State<Enlace13> {
   @override
   void initState() {
     super.initState();
+    _loadPoints();
     getRandomImage();
     getRandomPosition();
     extractPoints();
@@ -54,6 +56,41 @@ class _RandomImages extends State<Enlace13> {
       
   });
   }
+
+  _loadPoints() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int savedPoints = prefs.getInt('points') ?? 0;
+
+    setState(() {
+      points = savedPoints;
+    });
+  }
+
+  _incrementPoints() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int savedPoints = prefs.getInt('points') ?? points;
+    savedPoints = savedPoints + 5;
+
+    await prefs.setInt('points', savedPoints);
+
+    setState(() {
+      points = savedPoints;
+    });
+  }
+
+  _decrementPoints() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int savedPoints = prefs.getInt('points') ?? points;
+    savedPoints = savedPoints - (savedPoints * 0.25).round();
+    if (savedPoints < 0) savedPoints = 0;
+
+    await prefs.setInt('points', savedPoints);
+
+    setState(() {
+      points = savedPoints;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -123,23 +160,17 @@ class _RandomImages extends State<Enlace13> {
   }
 
   void extractPoints() {
-
     if (points > 0 && !click) {
-      points -= (points * 0.25).round();
-      
+      _decrementPoints();
     }
-
     click = false;
-
   }
 
   void onGiftTap(Image image) {
-    
       if (!click) {
-        points+= 5;
+        _incrementPoints();
         click = true;
       }
-      
     setState(() {});
   }
 }
